@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
-void printarr(int *arr, int size)
+void printarrwithptr(int *arr, int size)
 {
     for (int i = 0; i < size; i++)
     {
-        printf("%d\t", arr[i]);
+        printf("%d\t%d\n", arr[i], &arr[i]);
     }
 }
 
@@ -25,6 +25,6 @@ int main()
     }
 
     printf("The fibonacci array is:\n");
-    printarr(fibarr, arr_size);
+    printarrwithptr(fibarr, arr_size);
     return 0;
 }
